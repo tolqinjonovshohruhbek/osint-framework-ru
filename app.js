@@ -16,6 +16,7 @@ class OSINTTree {
         this.renderTree(this.data.children, this.container);
         this.bindSearch();
         this.bindLogoClick();
+        this.bindMobileMenu();
         this.updateStats();
     }
 
@@ -196,8 +197,35 @@ class OSINTTree {
                 document.querySelectorAll('.tree-folder.active').forEach(f => f.classList.remove('active'));
                 // Очищаем поиск
                 this.searchInput.value = '';
+                if (this.closeMobileMenu) this.closeMobileMenu();
             });
         }
+    }
+
+    bindMobileMenu() {
+        const toggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+
+        const closeMenu = () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', closeMenu);
+        }
+
+        this.closeMobileMenu = closeMenu;
     }
 
     bindSearch() {

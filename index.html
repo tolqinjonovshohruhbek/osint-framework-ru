@@ -16,9 +16,20 @@
 </head>
 
 <body>
+    <!-- Мобильная навигация -->
+    <div class="mobile-nav">
+        <button id="menuToggle" class="menu-toggle">
+            <span class="menu-icon">☰</span>
+        </button>
+        <span class="mobile-logo">OSINT Framework [RU]</span>
+    </div>
+
+    <!-- Затемнение фона при открытом меню на мобилках -->
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
     <div class="app">
         <!-- Боковая панель с деревом -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h1 class="logo" id="homeLink">
                     <span class="logo-icon">🔍</span>
