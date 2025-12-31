@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Framework [RU] — Инструменты разведки по открытым источникам</title>
+    <meta name="description"
+        content="Русскоязычная версия OSINT Framework — коллекция инструментов для разведки на основе открытых источников информации">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Боковая панель с деревом -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo" id="homeLink">
+                    <span class="logo-icon">🔍</span>
+                    <span class="logo-text">OSINT Framework</span>
+                    <span class="logo-lang">[RU]</span>
+                </h1>
+                <p class="tagline">Инструменты разведки по открытым источникам</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск инструментов..." autocomplete="off">
+                <span class="search-icon">⌘K</span>
+            </div>
+
+            <nav class="tree-container" id="treeContainer">
+                <!-- Дерево будет вставлено через JS -->
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="translator-credit">
+                    <span class="credit-label">Перевод:</span>
+                    <a href="https://github.com/tolqinjonovshohruhbek" target="_blank" rel="noopener"
+                        class="credit-link">@tolqinjonovshohruhbek</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-info">
+                    <h2 id="categoryTitle">Добро пожаловать</h2>
+                    <p id="categoryDescription">Выберите категорию в дереве слева для просмотра инструментов</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="totalTools">500+</span>
+                        <span class="stat-label">инструментов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="totalCategories">20+</span>
+                        <span class="stat-label">категорий</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Секция заметок удалена и перенесена внутрь welcome-card -->
+
+            <section class="tools-grid" id="toolsGrid">
+                <!-- Карточки инструментов -->
+                <div class="welcome-card">
+                    <div class="welcome-icon">🌐</div>
+                    <h3>OSINT Framework на русском</h3>
+                    <p>Это русскоязычная версия популярного OSINT Framework — интерактивной карты инструментов для
+                        разведки на основе открытых источников.</p>
+
+                    <div class="notes-content-embedded">
+                        <div class="notes-header-embedded">
+                            <span class="notes-icon">📝</span>
+                            <h3>Заметки автора</h3>
+                        </div>
+                        <p><strong>OSINT Framework</strong> ориентирован на сбор информации из
+                            <strong>бесплатных</strong> инструментов и ресурсов. Цель — помочь людям найти бесплатные
+                            OSINT-ресурсы. Некоторые из включённых сайтов могут потребовать регистрации или
+                            предоставлять дополнительные данные за деньги, но вы должны иметь возможность получить хотя
+                            бы часть информации бесплатно.
+                        </p>
+                        <p>Изначально эта структура была создана с точки зрения <strong>информационной
+                                безопасности</strong>. С тех пор отклик со стороны других областей и дисциплин был
+                            невероятным. Мы рады включать любые другие OSINT-ресурсы, особенно из областей за пределами
+                            infosec.</p>
+                        <div class="notes-footer-embedded">
+                            <span>Оригинал: <a href="https://osintframework.com/" target="_blank"
+                                    rel="noopener">osintframework.com</a></span> •
+                            <span>Автор: <a href="https://twitter.com/jnordine" target="_blank"
+                                    rel="noopener">@jnordine</a></span> •
+                            <span>GitHub: <a href="https://github.com/lockfale/osint-framework" target="_blank"
+                                    rel="noopener">lockfale/osint-framework</a></span>
+                        </div>
+                    </div>
+
+                    <p class="welcome-hint">👈 Начните с выбора категории в боковом меню</p>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <div class="footer-legend-container">
+                    <h4>Условные обозначения:</h4>
+                    <div class="footer-legend-grid">
+                        <div class="legend-item"><span class="badge badge-tool">T</span> Локальный инструмент (нужно
+                            скачивать)</div>
+                        <div class="legend-item"><span class="badge badge-reg">R</span> Требуется регистрация</div>
+                        <div class="legend-item"><span class="badge badge-dork">D</span> Google Dork (спец. запрос)
+                        </div>
+                        <div class="legend-item"><span class="badge badge-manual">M</span> Ручной ввод URL</div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p>Названия сохранены на английском. Основано на <a href="https://osintframework.com/"
+                            target="_blank" rel="noopener">OSINT Framework</a> by <a href="https://twitter.com/jnordine"
+                            target="_blank" rel="noopener">@jnordine</a></p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
